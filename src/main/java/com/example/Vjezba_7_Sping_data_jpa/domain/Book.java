@@ -27,12 +27,12 @@ public class Book {
     private Publisher publisher;
 
 
-    public Book(BookDto book) {
-        this.id = book.getId();
-        this.title = book.getTitle();
-        this.isbn = book.getIsbn();
-        this.pages = book.getPages();
-        this.price = book.getPrice();
-        this.publisher = book.getPublisher();
-    }
+//    public Book(BookDto book) {
+//        this.id = book.getId();
+//        this.title = book.getTitle();
+//        this.isbn = book.getIsbn();
+//        this.pages = book.getPages();
+//        this.price = book.getPrice();
+//        this.publisher = book.getPublisher();
+//    }
 }

@@ -37,7 +37,9 @@ public class BookDto {
     private BigDecimal price;
 
     @NotNull(message = "Publisher is required")
-    private Publisher publisher;
+    //    private Publisher publisher;
+    private String publisherName;
+
 
     public BookDto(Book book) {
         this.id = book.getId();
@@ -45,6 +47,8 @@ public class BookDto {
         this.isbn = book.getIsbn();
         this.pages = book.getPages();
         this.price = book.getPrice();
-        this.publisher = book.getPublisher();
+
+//        this.publisher = book.getPublisher();
+        this.publisherName = book.getPublisher().getName();
     }
 }

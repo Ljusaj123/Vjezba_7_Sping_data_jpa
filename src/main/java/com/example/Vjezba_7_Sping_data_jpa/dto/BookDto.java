@@ -13,10 +13,8 @@ import lombok.ToString;
 
 import java.math.BigDecimal;
 
-@AllArgsConstructor
 @NoArgsConstructor
 @Data
-@ToString
 public class BookDto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

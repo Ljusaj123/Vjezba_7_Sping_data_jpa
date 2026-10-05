@@ -99,5 +99,16 @@ public class BookServiceImpl implements BookService {
                 bookDto.getPrice(),
                 publisher
         );
+
+        //ILI
+
+//        Book book = Book.builder()
+//                .id(bookDto.getId())
+//                .title(bookDto.getTitle())
+//                .isbn(bookDto.getIsbn())
+//                .price(bookDto.getPrice())
+//                .pages(bookDto.getPages())
+//                .publisher(publisher)
+//                .build();
     }
 }

@@ -4,6 +4,7 @@ import com.example.Vjezba_7_Sping_data_jpa.dto.BookDto;
 import com.example.Vjezba_7_Sping_data_jpa.service.BookService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,10 +14,10 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/books")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class BookController {
 
-    private BookService bookService;
+    private final BookService bookService;
 
     @GetMapping
     public List<BookDto> getAllBooks(){
@@ -32,10 +33,11 @@ public class BookController {
                 ));
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping()
-    public ResponseEntity createBook(@Valid @RequestBody BookDto book){
+    public String createBook(@Valid @RequestBody BookDto book){
         bookService.saveBook(book);
-        return ResponseEntity.ok("Book created successfully");
+        return "Book created successfully";
     }
 
     @PutMapping("/{book_id}")

@@ -3,6 +3,7 @@ package com.example.Vjezba_7_Sping_data_jpa.domain;
 import com.example.Vjezba_7_Sping_data_jpa.dto.BookDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+//@Builder
 @Table(name = "Book")
 public class Book {
     @Id
